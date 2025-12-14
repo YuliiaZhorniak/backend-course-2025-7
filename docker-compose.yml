@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
       - "9229:9229"
-    command: node main.js -H 0.0.0.0 -p 3000 -c /tmp/cache
+    command: npx nodemon --inspect=0.0.0.0:9229 main.js -H 0.0.0.0 -p 3000 -c /tmp/cache
     env_file:
       - .env
     volumes:
